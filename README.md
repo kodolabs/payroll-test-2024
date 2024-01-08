@@ -19,6 +19,8 @@ Example:
 # What you have to do
 
 1. On manual action it should generate a new payroll according to a schedule. 
-  * Each new payroll should have consequent dates without gaps.
-  * Take into account that payroll schedule can be changed in the future (it can be changed to other dates or frequency can be changed)
+    * If no payrolls exists yet, it should generate a payroll starting from 2 months back.
+    * Payrolls should not be generated for the future.
+    * Each new payroll should have consequent dates without gaps.
+    * Take into account that payroll schedule can be changed (to other days of month, frequency, etc.)
 2. Advanced: trigger payroll generation automatically according to a schedule. 
