@@ -1,24 +1,24 @@
-# README
+# SETUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- clone repository
+- run ```bundle install``` and ```rake db:setup```
+- start rails server
 
-Things you may want to cover:
+# The Task
 
-* Ruby version
+Payroll is an entity that represents a header of a regular payroll document (salary).
+It contains information about the period of the payroll - start and end dates.
 
-* System dependencies
+Salary is paid two times a month on 5-th and 20-th day of the month.
 
-* Configuration
+Example: 
 
-* Database creation
+ - on 20 Jan it generates a payroll for the period of 5 Jan to 19 Jan
+ - on 5 Feb it generates a payroll for the period of 20 Jan to 4 Feb
 
-* Database initialization
+# What you have to do
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. On manual action it should generate a new payroll according to a schedule. 
+  * Each new payroll should have consequent dates without gaps.
+  * Take into account that payroll schedule can be changed in the future (it can be changed to other dates or frequency can be changed)
+2. Advanced: trigger payroll generation automatically according to a schedule. 
