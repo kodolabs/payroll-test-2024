@@ -4,10 +4,10 @@
   %ul
     - @payrolls.each do |payroll|
       %li
-        = payroll.starts_at.to_s(:short)
+        = payroll.starts_at #.to_s(:short)
         &mdash;
-        = payroll.ends_at.to_s(:short)
-        = link_to '[X]', payroll, method: :delete
+        = payroll.ends_at #.to_s(:short)
+        = link_to '[X]', payroll, data: { turbo_method: :delete }
 - else
   %p no payrolls
 

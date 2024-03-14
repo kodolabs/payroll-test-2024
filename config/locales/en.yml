@@ -28,4 +28,8 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        payroll:
+          taken: 'Payroll for this period already exists.'
