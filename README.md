@@ -17,13 +17,13 @@ Example:
   - third: 5 feb - 19 feb
   - and so on...
 
-# Payroll generation rules
+## Payroll generation rules
 
 - If no payrolls exists yet, it should generate a payroll starting exactly 2 months ago
 - Payrolls should not be generated for the future.
 - Each new payroll should have consequent dates without gaps.
 
-# What you have to do
+## What you have to do
 
 1. On manual action it should generate a new payroll according to a schedule. 
    NOTE: Take into account that payroll schedule can be changed over time (to other days of month, frequency, etc.)
